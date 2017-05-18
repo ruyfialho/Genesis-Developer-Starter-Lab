@@ -1,0 +1,31 @@
+/*!
+	Theme Name: Developers
+	Theme URI: https://github.com/RuyFialho/Developers
+	Description: The Genesis-Powered Developer's Starter Child Theme
+	Author: ruyfialho
+	Author URI: https://ruyfialho.com
+
+	Version: 1.0.0
+
+	Template: genesis
+	Template Version: 2.5.0
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+
+	Text Domain: developers
+*/
+
+@import "base/index";
+@import "layouts/index";
+@import "common-classes/index";
+@import "components/widgets/index";
+@import "plugins/index";
+@import "components/accessibility/index";
+@import "components/header/index";
+@import "components/navigation/index";
+@import "components/content/index";
+@import "components/comments/index";
+@import "components/sidebars/index";
+@import "components/footer/index";
+

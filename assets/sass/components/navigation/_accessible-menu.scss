@@ -1,0 +1,88 @@
+/* ## Accessible Menu
+--------------------------------------------- */
+
+.menu .menu-item {
+	&:focus {
+		position: static;
+	}
+
+	> a:focus + ul.sub-menu,
+	&.sfHover > ul.sub-menu {
+		left: auto;
+		opacity: 1;
+	}
+}
+
+.menu-toggle,
+.sub-menu-toggle {
+	display: none;
+	visibility: hidden;
+
+	@media only screen and (max-width: 1023px) {
+		background-color: $navToggle__BackgroundColor;
+		border-width: 0;
+		color: $navToggle__Color;
+		display: block;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		visibility: visible;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	.menu-toggle:focus,
+	.menu-toggle:hover,
+	.sub-menu-toggle:focus,
+	.sub-menu-toggle:hover {
+		background-color: $navToggle__BackgroundColor;
+		border-width: 0;
+		color: $navToggle__HoverColor;
+	}
+
+	.menu-toggle {
+		line-height: 22px;
+		position: relative;
+		width: 100%;
+		z-index: 1000;
+
+		&,
+		&:focus,
+		&:hover {
+			border-top: 1px solid #eee;
+		}
+
+		&::before {
+			font-size: 1.5em;
+			margin-right: 10px;
+			text-rendering: auto;
+		}
+	}
+
+	.sub-menu-toggle {
+		float: right;
+		padding: 13px 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 100;
+
+		.sub-menu & {
+			padding: 12px 10px;
+		}
+
+		&::before {
+			display: inline-block;
+			text-rendering: auto;
+			//transform: rotate(0);
+			@include transform( rotate(0) );
+			//transition: transform .25s ease-in-out;
+			@include transition( transform .25s ease-in-out );
+		}
+
+		&.activated::before {
+			//transform: rotate(180deg);
+			@include transform( rotate(180deg) );
+		}
+	}
+}

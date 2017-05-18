@@ -1,0 +1,66 @@
+//
+// Genesis Responsive Menus
+//=============================
+
+@media only screen and (max-width: 1023px) {
+	.genesis-responsive-menu {
+		display: none;
+		position: relative;
+
+		.wrap {
+			padding: 0;
+		}
+
+		.genesis-nav-menu {
+			.sub-menu {
+				border: none;
+				clear: both;
+				display: none;
+				margin: 0;
+				opacity: 1;
+				padding-left: 15px;
+				position: static;
+				width: 100%;
+
+				a {
+					width: 100%;
+				}
+
+				.sub-menu {
+					margin: 0;
+				}
+			}
+
+			.menu-item {
+				display: block;
+				float: none;
+				position: relative;
+				text-align: left;
+
+				&:focus,
+				&:hover {
+					position: relative;
+				}
+
+				a {
+					border: none;
+					margin-bottom: 1px;
+					padding: 15px 20px;
+					width: 100%;
+				}
+
+				> a:focus {
+					ul.sub-menu,
+					ul.sub-menu .sub-menu {
+						left: 0;
+						margin-left: 0;
+					}
+				}
+			}
+
+			> .menu-item-has-children > a::after {
+				content: none;
+			}
+		}
+	}
+}
