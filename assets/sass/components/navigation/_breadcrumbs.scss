@@ -2,9 +2,8 @@
 --------------------------------------------- */
 
 .breadcrumb {
-	background-color: #fff;
-	font-size: 16px;
-	font-size: 1.6rem;
+	background-color: $breadcrumbs__BackgroundColor;
+	font-size: rem( $breadcrumbs__FontSize );
 	margin-bottom: 1px;
 	padding: 12px 30px;
 }
