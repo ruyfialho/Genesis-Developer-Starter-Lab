@@ -19,9 +19,9 @@
 	visibility: hidden;
 
 	@media only screen and (max-width: 1023px) {
-		background-color: $navToggle__BackgroundColor;
+		background-color: $nav-toggle--background-color;
 		border-width: 0;
-		color: $navToggle__Color;
+		color: $nav-toggle--color;
 		display: block;
 		margin: 0 auto;
 		overflow: hidden;
@@ -35,9 +35,9 @@
 	.menu-toggle:hover,
 	.sub-menu-toggle:focus,
 	.sub-menu-toggle:hover {
-		background-color: $navToggle__BackgroundColor;
+		background-color: $nav-toggle--background-color;
 		border-width: 0;
-		color: $navToggle__HoverColor;
+		color: $nav-toggle--hover-color;
 	}
 
 	.menu-toggle {

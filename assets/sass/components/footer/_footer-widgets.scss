@@ -2,26 +2,26 @@
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: $footerWidgets__BackgroundColor;
+	background-color: $footer-widgets--background-color;
 	clear: both;
-	font-size: rem( $footerWidgets__FontSize );
+	font-size: rem( $footer-widgets--font-size );
 	padding: 60px 0;
 }
 
 .footer-widgets-1,
 .footer-widgets-2,
 .footer-widgets-3 {
-	width: $footerWidgets__Width;
+	width: $footer-widgets--width;
 
-	@media only screen and (max-width: 1340px) {
-		width: $footerWidgets__Width_LargerScreen;
+	@include media( $breakpoint__screen-size--larger ) {
+		width: $footer-widgets--width-larger-screen;
 	}
 
-	@media only screen and (max-width: 1200px) {
-		width: $footerWidgets__Width_LargeScreen;
+	@include media( $breakpoint__screen-size--large ) {
+		width: $footer-widgets--width-large-screen;
 	}
 
-	@media only screen and (max-width: 1023px) {
+	@include media( $breakpoint__screen-size--medium ) {
 		width: 100%;
 	}
 }
@@ -29,11 +29,11 @@
 .footer-widgets-1 {
 	margin-right: 70px;
 
-	@media only screen and (max-width: 1340px) {
+	@include media( $breakpoint__screen-size--larger ) {
 		margin-right: 60px;
 	}
 
-	@media only screen and (max-width: 1200px) {
+	@include media( $breakpoint__screen-size--large ) {
 		margin-right: 30px;
 	}
 }
@@ -42,7 +42,7 @@
 .footer-widgets-2 {
 	float: left;
 
-	@media only screen and (max-width: 1023px) {
+	@include media( $breakpoint__screen-size--medium ) {
 		margin: 0 auto 40px;
 	}
 }
