@@ -25,7 +25,7 @@ function load_nonadmin_files() {
 		'components/woocommerce/woocommerce-setup.php',
 		'components/woocommerce/woocommerce-css-handler.php',
 		'functions/formatting.php',
-		'functions/load-assets.php',
+		'functions/asset/enqueue.php',
 		'functions/markup.php',
 //		'structure/archive.php',
 		'structure/comments.php',

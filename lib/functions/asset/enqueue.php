@@ -1,6 +1,6 @@
 <?php
 /**
- * Asset loader handler.
+ * Asset autoloader/enqueue
  *
  * @package     RuyFialho\Developers
  * @since       1.0.0
@@ -19,12 +19,26 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_assets' );
  * @return void
  */
 function enqueue_assets() {
+	$theme_dir = get_stylesheet_directory();
 
-	wp_enqueue_style( CHILD_TEXT_DOMAIN . '-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style(
+		CHILD_TEXT_DOMAIN . '-fonts',
+		'//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700',
+		array(),
+		CHILD_THEME_VERSION
+	);
 	wp_enqueue_style( 'dashicons' );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( CHILD_TEXT_DOMAIN . '-responsive-menu', CHILD_URL . "/assets/js/responsive-menus{$suffix}.js", array( 'jquery' ), CHILD_THEME_VERSION, true );
+	$asset_file = "/assets/js/responsive-menus{$suffix}.js";
+	wp_enqueue_script(
+		CHILD_TEXT_DOMAIN . '-responsive-menu',
+		CHILD_URL . $asset_file,
+		array( 'jquery' ),
+		get_asset_current_version_number( $theme_dir . $asset_file ),
+		true
+	);
+
 	wp_localize_script(
 		CHILD_TEXT_DOMAIN . '-responsive-menu',
 		'developers_responsive_menu',

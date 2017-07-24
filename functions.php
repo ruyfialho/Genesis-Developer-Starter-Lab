@@ -10,6 +10,8 @@
  */
 namespace RuyFialho\Developers;
 
+require( __DIR__ . '/lib/functions/asset/versioning.php' );
+
 include_once( 'lib/init.php' );
 
 include_once( 'lib/functions/autoload.php' );
